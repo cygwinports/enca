@@ -1,0 +1,14 @@
+inherit gnome2
+
+DESCRIPTION="Extremely Naive Charset Analyser"
+HOMEPAGE="http://trific.ath.cx/software/enca/"
+SRC_URI="http://trific.ath.cx/Ftp/${PN}/${P}.tar.bz2"
+
+abi=0
+PKG_NAMES="${PN} lib${PN}${abi} lib${PN}-devel"
+PKG_HINTS="setup lib devel"
+PKG_CONTENTS[0]="--exclude=gtk-doc usr/bin/*.exe usr/lib/${PN}/ usr/share/"
+PKG_CONTENTS[1]="usr/bin/cygenca-${abi}.dll"
+PKG_CONTENTS[2]='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+
+CYGCONF_ARGS="--libexecdir=/usr/lib --enable-static"
