@@ -1,0 +1,99 @@
+enca
+------------------------------------------
+Enca is an Extremely Naive Charset Analyser. It detects character set 
+and encoding of text files and can also convert them to other encodings. 
+The charset detecing functionality is also available as a library.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  bash
+  libiconv2-1.11-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.3.5-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gtk-doc-1.8-1
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://trific.ath.cx/software/enca/
+
+Canonical download:
+  http://trific.ath.cx/Ftp/enca/
+
+-------------------------------------------
+
+Build instructions:
+  unpack enca-1.9-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./enca-1.9-X.cygport all
+
+This will create:
+  /usr/src/enca-1.9-X-src.tar.bz2
+  /usr/src/enca-1.9-X.tar.bz2
+  /usr/src/libenca-devel-1.9-X.tar.bz2
+  /usr/src/libenca0-1.9-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(enca)
+  /usr/bin/enca.exe
+  /usr/bin/enconv.exe
+  /usr/lib/enca/extconv/cstocs
+  /usr/lib/enca/extconv/map
+  /usr/lib/enca/extconv/piconv
+  /usr/lib/enca/extconv/recode
+  /usr/lib/enca/extconv/umap
+  /usr/share/doc/Cygwin/enca-1.9.README
+  /usr/share/doc/enca-1.9/AUTHORS
+  /usr/share/doc/enca-1.9/COPYING
+  /usr/share/doc/enca-1.9/ChangeLog
+  /usr/share/doc/enca-1.9/FAQ
+  /usr/share/doc/enca-1.9/INSTALL
+  /usr/share/doc/enca-1.9/NEWS
+  /usr/share/doc/enca-1.9/README
+  /usr/share/doc/enca-1.9/THANKS
+  /usr/share/doc/enca-1.9/TODO
+  /usr/share/man/man1/enca.1.gz
+  /usr/share/man/man1/enconv.1
+
+(libenca0)
+  /usr/bin/cygenca-0.dll
+
+(libenca-devel)
+  /usr/include/enca.h
+  /usr/lib/libenca.a
+  /usr/lib/libenca.dll.a
+  /usr/lib/libenca.la
+  /usr/lib/pkgconfig/enca.pc
+  /usr/share/gtk-doc/html/libenca/ch01.html
+  /usr/share/gtk-doc/html/libenca/index.html
+  /usr/share/gtk-doc/html/libenca/index.sgml
+  /usr/share/gtk-doc/html/libenca/libenca-Analyser.html
+  /usr/share/gtk-doc/html/libenca/libenca-Auxiliary-Functions.html
+  /usr/share/gtk-doc/html/libenca/libenca-Charsets-and-Surfaces.html
+  /usr/share/gtk-doc/html/libenca/libenca-Typedefs-and-Constants.html
+  /usr/share/gtk-doc/html/libenca/libenca.devhelp
+
+------------------
+
+Port Notes:
+
+----- version 1.9-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
