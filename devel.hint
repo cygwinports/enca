@@ -1,5 +1,5 @@
 category: Text
-requires: cygwin libenca0
+requires: libenca0
 external-source: enca
 sdesc: "Character set analyser and converter (development)"
 ldesc: "Enca is an Extremely Naive Charset Analyser. It detects 

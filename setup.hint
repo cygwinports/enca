@@ -1,5 +1,5 @@
 category: Text
-requires: cygwin libenca0 libiconv2 bash
+requires: libenca0 libiconv2 bash
 sdesc: "Character set analyser and converter (utilities)"
 ldesc: "Enca is an Extremely Naive Charset Analyser. It detects 
 character set and encoding of text files and can also convert them to 
