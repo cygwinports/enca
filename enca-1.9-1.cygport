@@ -11,4 +11,5 @@ PKG_CONTENTS[0]="--exclude=gtk-doc usr/bin/*.exe usr/lib/${PN}/ usr/share/"
 PKG_CONTENTS[1]="usr/bin/cygenca-${abi}.dll"
 PKG_CONTENTS[2]='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
 
+ACLOCAL_FLAGS="-I m4"
 CYGCONF_ARGS="--libexecdir=/usr/lib --enable-static"
