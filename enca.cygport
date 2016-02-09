@@ -1,3 +1,6 @@
+NAME="enca"
+VERSION=1.9
+RELEASE=1
 inherit gnome2
 
 DESCRIPTION="Extremely Naive Charset Analyser"
@@ -13,3 +16,10 @@ PKG_CONTENTS[2]='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/
 
 ACLOCAL_FLAGS="-I m4"
 CYGCONF_ARGS="--libexecdir=/usr/lib --enable-static"
+CATEGORY="Text"
+REQUIRES="libenca0 libiconv2 bash"
+SUMMARY="Character set analyser and converter (utilities)"
+DESCRIPTION="Enca is an Extremely Naive Charset Analyser. It detects 
+character set and encoding of text files and can also convert them to 
+other encodings. The charset detecing functionality is also available as 
+a library."

@@ -1,8 +1,0 @@
-category: Text
-requires: cygwin
-external-source: enca
-sdesc: "Character set analyser and converter (library)"
-ldesc: "Enca is an Extremely Naive Charset Analyser. It detects 
-character set and encoding of text files and can also convert them to 
-other encodings. The charset detecing functionality is also available as 
-a library."
