@@ -1,25 +1,28 @@
-NAME="enca"
-VERSION=1.9
-RELEASE=1
 inherit gnome2
 
-DESCRIPTION="Extremely Naive Charset Analyser"
-HOMEPAGE="http://trific.ath.cx/software/enca/"
-SRC_URI="http://trific.ath.cx/Ftp/${PN}/${P}.tar.bz2"
+NAME="enca"
+VERSION=1.18
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Character set analyser library"
+DESCRIPTION="Enca is an Extremely Naive Charset Analyser. It detects character
+set and encoding of text files and can also convert them to other encodings.
+The charset detecing functionality is also available as a library."
+HOMEPAGE="http://cihar.com/software/enca/"
+SRC_URI="http://dl.cihar.com/enca/enca-${VERSION}.tar.xz"
+PATCH_URI="
+	1.18-no-undefined.patch
+	1.18-parallel-make.patch
+	1.18-vpath-build.patch
+"
 
-abi=0
-PKG_NAMES="${PN} lib${PN}${abi} lib${PN}-devel"
-PKG_HINTS="setup lib devel"
-PKG_CONTENTS[0]="--exclude=gtk-doc usr/bin/*.exe usr/lib/${PN}/ usr/share/"
-PKG_CONTENTS[1]="usr/bin/cygenca-${abi}.dll"
-PKG_CONTENTS[2]='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+PKG_NAMES="enca libenca0 libenca-devel libenca-doc"
+enca_CATEGORY="Text"
+enca_SUMMARY="Character set analyser and converter tool"
+enca_CONTENTS="--exclude=gtk-doc usr/bin/en* usr/libexec/enca/ usr/share/man/man1/"
+libenca0_CONTENTS="usr/bin/cygenca-0.dll usr/share/doc/"
+libenca_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/'
+libenca_doc_CATEGORY="Doc"
+libenca_doc_CONTENTS="usr/share/gtk-doc/html/libenca/"
 
 ACLOCAL_FLAGS="-I m4"
-CYGCONF_ARGS="--libexecdir=/usr/lib --enable-static"
-CATEGORY="Text"
-REQUIRES="libenca0 libiconv2 bash"
-SUMMARY="Character set analyser and converter (utilities)"
-DESCRIPTION="Enca is an Extremely Naive Charset Analyser. It detects 
-character set and encoding of text files and can also convert them to 
-other encodings. The charset detecing functionality is also available as 
-a library."
