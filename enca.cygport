@@ -19,6 +19,7 @@ PATCH_URI="
 PKG_NAMES="enca libenca0 libenca-devel libenca-doc"
 enca_CATEGORY="Text"
 enca_SUMMARY="Character set analyser and converter tool"
+enca_REQUIRES="gettext" # locale.alias
 enca_CONTENTS="--exclude=gtk-doc usr/bin/en* usr/libexec/enca/ usr/share/man/man1/"
 libenca0_CONTENTS="usr/bin/cygenca-0.dll usr/share/doc/"
 libenca_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/'
